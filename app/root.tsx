@@ -11,6 +11,8 @@ import {
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -18,7 +20,9 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
-  title: "Remix Notes",
+  title: "DoBu Martial Arts",
+  description:
+    "This will become a description of DoBu Martial Arts for search engines",
   viewport: "width=device-width,initial-scale=1",
 });
 
@@ -36,10 +40,12 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Footer />
       </body>
     </html>
   );
