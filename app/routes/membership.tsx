@@ -2,7 +2,7 @@ import MembershipCard from "~/components/Membership/MembershipCard";
 
 export default function Memberships() {
   return (
-    <div className="min-h-screen bg-yellow-100 p-4">
+    <div className="min-h-screen bg-white p-4">
       <h1 className="mb-4 text-center font-serif text-4xl font-extrabold text-red-900">
         Membership Page
       </h1>
