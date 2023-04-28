@@ -1,10 +1,14 @@
 import { Link } from "@remix-run/react";
+import { Form, Link } from "@remix-run/react";
 import logo from "~/assets/jpg/dobu Logo.jpg";
 import NavbarLink from "./NavbarLink";
 import { useState } from "react";
+import { useOptionalUser } from "~/utils";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const user = useOptionalUser();
+  console.log({ user });
   return (
     <header className=" bg-black  md:flex md:justify-between">
       <div className="flex items-center justify-between px-4 py-3">
@@ -44,7 +48,13 @@ const Navbar = () => {
         <NavbarLink url="/about">About Us</NavbarLink>
         <NavbarLink url="/classes">Classes</NavbarLink>
         <NavbarLink url="/membership">Membership</NavbarLink>
-        <NavbarLink url="/login">Login</NavbarLink>
+        <Link
+          to="/login"
+          type="button"
+          className="mt-4 rounded border-2 border-neutral-700 bg-neutral-300 px-4 py-2 text-neutral-900 transition-colors hover:bg-neutral-100 lg:mt-0 lg:ml-4"
+        >
+          Login
+        </Link>
       </div>
     </header>
   );
