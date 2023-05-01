@@ -1,5 +1,6 @@
 import MembershipCard from "~/components/Membership/MembershipCard";
 import { LoaderArgs } from "@remix-run/node";
+import { useUser } from "~/utils";
 
 import { requireUserId } from "~/session.server";
 
@@ -30,6 +31,22 @@ export default function Memberships() {
           level="Advanced"
           description="Any 2 martial arts - 5 sessions per week. Monthly fee."
           price="£45.00"
+        />
+        <MembershipCard
+          level="Elite"
+          description="Unlimited classes"
+          price="£60.00"
+        />
+        <MembershipCard
+          level="Private Martial Arts Tuition"
+          description="Private one to one sessions"
+          price="£15.00"
+        />
+        <MembershipCard
+          level="Junior Membership"
+          description="Can attend all-kids martial arts
+          sessions"
+          price="£25.00"
         />
       </ul>
     </div>
