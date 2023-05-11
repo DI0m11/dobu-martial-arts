@@ -17,10 +17,9 @@ export default function Footer() {
         >
           Facebook
         </a>
-
         <a
           className="text-2xm  p-5 text-left font-black"
-          href="https://www.facebook.com//"
+          href="https://twitter.com/i/flow/login//"
         >
           Twitter
         </a>
